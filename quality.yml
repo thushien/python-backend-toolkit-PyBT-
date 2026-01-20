@@ -1,0 +1,16 @@
+name: Code Quality & Security
+on: [push, pull_request]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Ruff & MyPy
+        run: pip install ruff mypy pytest
+      - name: Linting with Ruff
+        run: ruff check .
+      - name: Type Checking with MyPy
+        run: mypy .
+      - name: Security Scan (Bandit)
+        run: pip install bandit && bandit -r ./toolkit
