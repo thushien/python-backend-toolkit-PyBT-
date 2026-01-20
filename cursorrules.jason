@@ -1,0 +1,8 @@
+{
+  "instruction_sets": [
+    "Always use the 'Repository Pattern' for data layers.",
+    "Inject 'Logger' into every service class via dependency injection.",
+    "Prioritize 'pydantic-v2' syntax for all data validation.",
+    "Write 'pytest' unit tests for every new utility added to the /toolkit directory."
+  ]
+}
